@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ProActive Sports | Sports Consulting</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background-color: #101820;
+            color: white;
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: fixed;
+            width: 100%;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #20c05c;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #20c05c;
+        }
+
+
+        /* HOME */
+
+        .home {
+            min-height: 100vh;
+
+            background:
+            linear-gradient(
+                rgba(16, 24, 32, 0.80),
+                rgba(16, 24, 32, 0.80)
+            ),
+            url("https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 100px 20px;
+        }
+
+        .home-content {
+            max-width: 850px;
+        }
+
+        .home h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .home h1 span {
+            color: #20c05c;
+        }
+
+        .home p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            background-color: #20c05c;
+            color: white;
+
+            padding: 15px 30px;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #159447;
+        }
+
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 90px 10%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .title h2 {
+            font-size: 38px;
+            color: #101820;
+            margin-bottom: 15px;
+        }
+
+        .title p {
+            color: #666;
+            font-size: 17px;
+        }
+
+
+        /* ABOUT US */
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .about-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+
+        /* SERVICES */
+
+        .services {
+            background-color: white;
+        }
+
+        .services-container {
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .service-card {
+
+            background-color: #f5f7f9;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            border: 1px solid #ddd;
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+            0px 10px 20px
+            rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #101820;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+
+        /* INTERNATIONAL INSIGHTS */
+
+        .international {
+            background-color: #101820;
+            color: white;
+        }
+
+        .international .title h2 {
+            color: white;
+        }
+
+        .international .title p {
+            color: #ddd;
+        }
+
+        .insights-container {
+
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .insight-card {
+
+            background-color: #1c2833;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            border-top:
+            4px solid #20c05c;
+        }
+
+        .insight-card h3 {
+            color: #20c05c;
+            margin-bottom: 15px;
+        }
+
+        .insight-card p {
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            background-color: #f1f3f5;
+        }
+
+        .contact-container {
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+        form {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+
+            padding: 15px;
+
+            border:
+            1px solid #ccc;
+
+            border-radius: 6px;
+
+            font-size: 16px;
+        }
+
+        textarea {
+
+            height: 150px;
+
+            resize: vertical;
+        }
+
+        button {
+
+            padding: 15px;
+
+            border: none;
+
+            background-color: #20c05c;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #159447;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            background-color: #101820;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer span {
+            color: #20c05c;
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 900px) {
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+
+            .insights-container {
+                grid-template-columns: 1fr;
+            }
+
+            .home h1 {
+                font-size: 45px;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 12px;
+            }
+
+            .home h1 {
+                font-size: 35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION MENU -->
+
+<header>
+
+    <div class="logo">
+        ProActive <span>Sports</span>
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About Us</a>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+            </li>
+
+            <li>
+                <a href="#international">
+                    International Insights
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- HOME -->
+
+<section
+class="home"
+id="home">
+
+    <div class="home-content">
+
+        <h1>
+
+            Transforming the Future of
+
+            <span>Sports</span>
+
+        </h1>
+
+        <p>
+
+            ProActive Sports is a consulting company that provides
+            strategic consulting, technological development, and
+            innovative solutions for sports organizations, clubs,
+            and companies.
+
+        </p>
+
+        <a
+        href="#services"
+        class="button">
+
+            Explore Our Services
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT US -->
+
+<section id="about">
+
+    <div class="about-container">
+
+        <img
+        src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1000&q=80"
+        alt="Sports team">
+
+        <div class="about-text">
+
+            <h2>
+                About ProActive Sports
+            </h2>
+
+            <p>
+
+                ProActive Sports is a consulting company focused on
+                helping sports organizations improve their management,
+                performance, and innovation.
+
+            </p>
+
+            <p>
+
+                Our mission is to provide consulting services,
+                technological development, and strategic solutions
+                that promote growth, efficiency, and innovation
+                in the sports industry.
+
+            </p>
+
+            <p>
+
+                We aim to become an internationally recognized company
+                that supports digital transformation and sustainable
+                development in sports organizations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section
+class="services"
+id="services">
+
+    <div class="title">
+
+        <h2>
+            Our Services
+        </h2>
+
+        <p>
+            Professional solutions for the modern sports industry.
+        </p>
+
+    </div>
+
+
+    <div class="services-container">
+
+
+        <div class="service-card">
+
+            <div class="icon">
+                📊
+            </div>
+
+            <h3>
+                Sports Consulting
+            </h3>
+
+            <p>
+
+                We analyze organizations and develop strategies
+                to improve management, planning, and performance.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <div class="icon">
+                💻
+            </div>
+
+            <h3>
+                Technology Development
+            </h3>
+
+            <p>
+
+                We create technological solutions that help
+                sports organizations improve their processes
+                and digital transformation.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <div class="icon">
+                🚀
+            </div>
+
+            <h3>
+                Strategic Innovation
+            </h3>
+
+            <p>
+
+                We design innovative strategies that help
+                organizations adapt to the changing global
+                sports environment.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- INTERNATIONAL INSIGHTS -->
+
+<section
+class="international"
+id="international">
+
+    <div class="title">
+
+        <h2>
+            International Insights
+        </h2>
+
+        <p>
+
+            Understanding the global sports industry.
+
+        </p>
+
+    </div>
+
+
+    <div class="insights-container">
+
+
+        <div class="insight-card">
+
+            <h3>
+                🌎 Global Sports Trends
+            </h3>
+
+            <p>
+
+                We analyze international trends in sports,
+                technology, management, and innovation to help
+                organizations remain competitive.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="insight-card">
+
+            <h3>
+                🤝 Cultural Understanding
+            </h3>
+
+            <p>
+
+                We understand that sports organizations operate
+                in different cultural environments and require
+                strategies adapted to their international markets.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="insight-card">
+
+            <h3>
+                🌐 International Opportunities
+            </h3>
+
+            <p>
+
+                We help organizations identify opportunities for
+                international growth, collaboration, and expansion
+                in the global sports industry.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section
+class="contact"
+id="contact">
+
+    <div class="title">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+
+            Let's work together to transform your sports organization.
+
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+        <form
+        onsubmit="sendMessage(event)">
+
+            <input
+            type="text"
+            placeholder="Your Name"
+            required>
+
+
+            <input
+            type="email"
+            placeholder="Your Email"
+            required>
+
+
+            <input
+            type="text"
+            placeholder="Company or Organization">
+
+
+            <textarea
+            placeholder="Write your message"
+            required></textarea>
+
+
+            <button type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+
+        © 2026
+
+        <span>
+            ProActive Sports
+        </span>
+
+        | Sports Consulting, Innovation and Technology
+
+    </p>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    function sendMessage(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Thank you for contacting ProActive Sports!"
+        );
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
