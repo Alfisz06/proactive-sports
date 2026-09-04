@@ -9,6 +9,10 @@
 
     <style>
 
+        /* =========================
+           GENERAL SETTINGS
+        ========================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -25,7 +29,10 @@
             color: #222;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION MENU
+        ========================== */
 
         header {
             background-color: #101820;
@@ -62,6 +69,7 @@
             color: white;
             text-decoration: none;
             font-size: 15px;
+            transition: 0.3s;
         }
 
         nav ul li a:hover {
@@ -69,7 +77,9 @@
         }
 
 
-        /* HOME */
+        /* =========================
+           HOME
+        ========================== */
 
         .home {
             min-height: 100vh;
@@ -126,14 +136,19 @@
             font-weight: bold;
 
             display: inline-block;
+
+            transition: 0.3s;
         }
 
         .button:hover {
             background-color: #159447;
+            transform: scale(1.05);
         }
 
 
-        /* GENERAL SECTIONS */
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
 
         section {
             padding: 90px 10%;
@@ -156,13 +171,14 @@
         }
 
 
-        /* ABOUT US */
+        /* =========================
+           ABOUT US
+        ========================== */
 
         .about-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-
             align-items: center;
         }
 
@@ -174,6 +190,7 @@
         .about-text h2 {
             font-size: 35px;
             margin-bottom: 20px;
+            color: #101820;
         }
 
         .about-text p {
@@ -183,7 +200,9 @@
         }
 
 
-        /* SERVICES */
+        /* =========================
+           SERVICES
+        ========================== */
 
         .services {
             background-color: white;
@@ -191,35 +210,22 @@
 
         .services-container {
             display: grid;
-
-            grid-template-columns:
-            repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .service-card {
-
             background-color: #f5f7f9;
-
             padding: 30px;
-
             text-align: center;
-
             border-radius: 10px;
-
             border: 1px solid #ddd;
-
             transition: 0.3s;
         }
 
         .service-card:hover {
-
             transform: translateY(-8px);
-
-            box-shadow:
-            0px 10px 20px
-            rgba(0,0,0,0.1);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
         }
 
         .icon {
@@ -238,104 +244,95 @@
         }
 
 
-        /* CULTURE AND TRAVEL */
+        /* =========================
+           CULTURE AND TRAVEL
+           SPAIN
+        ========================== */
 
         .culture {
-        background-color: #101820;
-        color: white;
+            background-color: #101820;
+            color: white;
         }
 
         .culture .title h2 {
-        color: white;
+            color: white;
         }
 
         .culture .title p {
-        color: #ddd;
+            color: #ddd;
         }
 
         .culture-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
         .culture-card {
-        background-color: #1c2833;
-        padding: 30px;
-        border-radius: 10px;
-        border-top: 4px solid #20c05c;
+            background-color: #1c2833;
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 4px solid #20c05c;
+            transition: 0.3s;
+        }
+
+        .culture-card:hover {
+            transform: translateY(-8px);
         }
 
         .culture-card h3 {
-        color: #20c05c;
-        margin-bottom: 15px;
+            color: #20c05c;
+            margin-bottom: 15px;
         }
 
         .culture-card p {
-        line-height: 1.7;
-        color: #e0e0e0;
+            line-height: 1.7;
+            color: #e0e0e0;
         }
 
 
-        /* CONTACT */
+        /* =========================
+           CONTACT
+        ========================== */
 
         .contact {
             background-color: #f1f3f5;
         }
 
         .contact-container {
-
             max-width: 700px;
-
             margin: auto;
         }
 
         form {
-
             display: flex;
-
             flex-direction: column;
-
             gap: 15px;
         }
 
         input,
         textarea {
-
             padding: 15px;
-
-            border:
-            1px solid #ccc;
-
+            border: 1px solid #ccc;
             border-radius: 6px;
-
             font-size: 16px;
         }
 
         textarea {
-
             height: 150px;
-
             resize: vertical;
         }
 
         button {
-
             padding: 15px;
-
             border: none;
-
             background-color: #20c05c;
-
             color: white;
-
             font-size: 16px;
-
             font-weight: bold;
-
             border-radius: 6px;
-
             cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
@@ -343,16 +340,14 @@
         }
 
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
-
             background-color: #101820;
-
             color: white;
-
             text-align: center;
-
             padding: 25px;
         }
 
@@ -361,7 +356,9 @@
         }
 
 
-        /* RESPONSIVE DESIGN */
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
 
         @media (max-width: 900px) {
 
@@ -373,7 +370,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .insights-container {
+            .culture-container {
                 grid-template-columns: 1fr;
             }
 
@@ -383,26 +380,26 @@
 
         }
 
+
         @media (max-width: 700px) {
 
             header {
-
                 flex-direction: column;
-
                 gap: 15px;
             }
 
             nav ul {
-
                 flex-wrap: wrap;
-
                 justify-content: center;
-
                 gap: 12px;
             }
 
             .home h1 {
                 font-size: 35px;
+            }
+
+            section {
+                padding: 70px 7%;
             }
 
         }
@@ -415,7 +412,9 @@
 <body>
 
 
-<!-- NAVIGATION MENU -->
+<!-- =========================
+     NAVIGATION MENU
+========================== -->
 
 <header>
 
@@ -440,9 +439,7 @@
             </li>
 
             <li>
-                <a href="#international">
-                    International Insights
-                </a>
+                <a href="#culture">Culture and Travel</a>
             </li>
 
             <li>
@@ -457,37 +454,28 @@
 
 
 
-<!-- HOME -->
+<!-- =========================
+     HOME
+========================== -->
 
-<section
-class="home"
-id="home">
+<section class="home" id="home">
 
     <div class="home-content">
 
         <h1>
-
             Transforming the Future of
-
             <span>Sports</span>
-
         </h1>
 
         <p>
-
             ProActive Sports is a consulting company that provides
             strategic consulting, technological development, and
             innovative solutions for sports organizations, clubs,
             and companies.
-
         </p>
 
-        <a
-        href="#services"
-        class="button">
-
+        <a href="#services" class="button">
             Explore Our Services
-
         </a>
 
     </div>
@@ -496,7 +484,9 @@ id="home">
 
 
 
-<!-- ABOUT US -->
+<!-- =========================
+     ABOUT US
+========================== -->
 
 <section id="about">
 
@@ -513,28 +503,22 @@ id="home">
             </h2>
 
             <p>
-
                 ProActive Sports is a consulting company focused on
                 helping sports organizations improve their management,
                 performance, and innovation.
-
             </p>
 
             <p>
-
                 Our mission is to provide consulting services,
                 technological development, and strategic solutions
                 that promote growth, efficiency, and innovation
                 in the sports industry.
-
             </p>
 
             <p>
-
                 We aim to become an internationally recognized company
                 that supports digital transformation and sustainable
                 development in sports organizations.
-
             </p>
 
         </div>
@@ -545,11 +529,11 @@ id="home">
 
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================== -->
 
-<section
-class="services"
-id="services">
+<section class="services" id="services">
 
     <div class="title">
 
@@ -578,10 +562,8 @@ id="services">
             </h3>
 
             <p>
-
                 We analyze organizations and develop strategies
                 to improve management, planning, and performance.
-
             </p>
 
         </div>
@@ -599,11 +581,9 @@ id="services">
             </h3>
 
             <p>
-
                 We create technological solutions that help
                 sports organizations improve their processes
                 and digital transformation.
-
             </p>
 
         </div>
@@ -621,11 +601,9 @@ id="services">
             </h3>
 
             <p>
-
                 We design innovative strategies that help
                 organizations adapt to the changing global
                 sports environment.
-
             </p>
 
         </div>
@@ -637,78 +615,95 @@ id="services">
 
 
 
-<!-- INTERNATIONAL INSIGHTS -->
+<!-- =========================
+     CULTURE AND TRAVEL
+     SPAIN
+========================== -->
 
-<section
-class="international"
-id="international">
+<section class="culture" id="culture">
 
     <div class="title">
 
         <h2>
-            International Insights
+            Culture and Travel in Spain 🇪🇸
         </h2>
 
         <p>
-
-            Understanding the global sports industry.
-
+            Discover the culture, traditions, and sports experiences
+            that make Spain a unique destination.
         </p>
 
     </div>
 
 
-    <div class="insights-container">
+    <div class="culture-container">
 
 
-        <div class="insight-card">
+        <!-- SPANISH CULTURE -->
+
+        <div class="culture-card">
 
             <h3>
-                🌎 Global Sports Trends
+                🇪🇸 Spanish Culture
             </h3>
 
             <p>
+                Spain is known for its rich history, traditional
+                celebrations, gastronomy, music, architecture,
+                and strong sense of community.
+            </p>
 
-                We analyze international trends in sports,
-                technology, management, and innovation to help
-                organizations remain competitive.
-
+            <p>
+                Spanish culture combines historical traditions with
+                modern lifestyles, creating unique experiences for
+                visitors from around the world.
             </p>
 
         </div>
 
 
 
-        <div class="insight-card">
+        <!-- SPORTS -->
+
+        <div class="culture-card">
 
             <h3>
-                🤝 Cultural Understanding
+                ⚽ Sports and Football
             </h3>
 
             <p>
+                Sport is an important part of Spanish culture.
+                Football is especially popular, with famous clubs,
+                passionate supporters, and major sporting events.
+            </p>
 
-                We understand that sports organizations operate
-                in different cultural environments and require
-                strategies adapted to their international markets.
-
+            <p>
+                Spain also has an important presence in basketball,
+                tennis, cycling, and motorsports.
             </p>
 
         </div>
 
 
 
-        <div class="insight-card">
+        <!-- TRAVEL -->
+
+        <div class="culture-card">
 
             <h3>
-                🌐 International Opportunities
+                ✈️ Travel Experiences
             </h3>
 
             <p>
+                Spain offers diverse travel experiences, including
+                historic cities, cultural landmarks, beautiful
+                beaches, and modern sports facilities.
+            </p>
 
-                We help organizations identify opportunities for
-                international growth, collaboration, and expansion
-                in the global sports industry.
-
+            <p>
+                Visitors can discover places such as Madrid,
+                Barcelona, Seville, and Valencia while experiencing
+                Spanish traditions, gastronomy, and sporting culture.
             </p>
 
         </div>
@@ -720,11 +715,11 @@ id="international">
 
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================== -->
 
-<section
-class="contact"
-id="contact">
+<section class="contact" id="contact">
 
     <div class="title">
 
@@ -733,9 +728,7 @@ id="contact">
         </h2>
 
         <p>
-
             Let's work together to transform your sports organization.
-
         </p>
 
     </div>
@@ -743,8 +736,7 @@ id="contact">
 
     <div class="contact-container">
 
-        <form
-        onsubmit="sendMessage(event)">
+        <form onsubmit="sendMessage(event)">
 
             <input
             type="text"
@@ -769,9 +761,7 @@ id="contact">
 
 
             <button type="submit">
-
                 Send Message
-
             </button>
 
         </form>
@@ -782,7 +772,9 @@ id="contact">
 
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================== -->
 
 <footer>
 
@@ -802,7 +794,9 @@ id="contact">
 
 
 
-<!-- JAVASCRIPT -->
+<!-- =========================
+     JAVASCRIPT
+========================== -->
 
 <script>
 
